@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&family=Shadows+Into+Light&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -6,12 +8,16 @@ nav a {
     text-align: center;
     color: #f8f991;
     text-decoration: none;
+    padding: 35px;
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
 }
 #hero-img {
     width: 100%;
+    /*border: 1px solid #f8f991;
+    box-sizing: border-box;*/
+    
 }
 .button-box {
     text-align: center;
@@ -19,17 +25,30 @@ nav a {
 main section {
     text-align: center;
 }
+main section img {
+    box-sizing: border-box;
+}
 #background {
     height: 725px;
 }
 body {
     background-color: #006e90;
+    font-family: Mali, Papyrus, 'Trebuchet MS';
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    margin: 0;
 }
 header {
     background-color: #4d8b31;
 }
 .logo {
     width: 80px;
+}
+#logo_link {
+    padding-top: 5px;
 }
 nav a:hover {
     background-color: #006e90;
@@ -39,6 +58,10 @@ nav a:hover {
     background-color: #f8f991;
     color: #4d8b31;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .book:hover, .join:hover {
     background-color: #ffffff;
@@ -49,16 +72,23 @@ nav a:hover {
 }
 .msg {
     background-color: #006e90;
+    line-height: 1.5em;
+    padding: 35px;
 }
 .msg h2 {
     color: #f8f991;
+    font-family: 'Shadows Into Light', 'Gill Sans', 'Lucida Bright';
 }
 .msg p {
     color: #ffffff;
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 footer {
     background-color: #4d8b31;
     color: #f8f991;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer a {
     color: #ffffff;
@@ -68,9 +98,14 @@ footer a:hover {
     color: #006e90;
     background-color: #ffffff;
 }
-
+footer .social img {
+    padding-top: 15px;
+}
 .home-title {
     color: #ffffff;
+    font-family: 'Shadows Into Light', 'Gill Sans', 'Lucida Bright';
+    font-size: 2em;
+    margin-top: 10px;
 }
 h4 {
     color: #ffffff;
@@ -78,10 +113,18 @@ h4 {
 .icon {
     display: block;
     margin: 0 auto;
-}
-.icon {
+    padding-top: 10px;
     width: 80px;
 }
 footer p a:hover{
     text-decoration: underline;
+}
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+.card-img {
+    border: 10px solid #fdff70;
+    border-left: 5px solid #f8f991;
+    border-bottom: 5px solid #fdf991;
+    border-radius: 5px;
 }
