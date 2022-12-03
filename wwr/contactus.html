@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Yonder | White Water Rafting Adventures | Contact Us</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        form {
+            /* center the form on the page */
+            margin: 0 auto;
+            width: 400px;
+            /* form outline */
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        form li + li {
+            margin-top: 1em;
+        }
+        label {
+            /* uniform size and alignment */
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+        input,
+        textarea {
+            /* to make sure that all text fields have the same font settings
+            by default, textareas have a monospace font */
+            font: 1em sans-seif;
+            
+            /*uniform text field size*/
+            width: 300px;
+            box-sizing: border-box;
+
+            /*match form field borders*/
+            border: 1px solid #999;
+        }
+        input:focus,
+        textarea:focus {
+            /*additional highlight for focused elements*/
+            border-color: #000;
+        }
+        textarea {
+            /*align multiline text fields with their labels*/
+            vertical-align: top;
+
+            /*provide space to type some text*/
+            height: 5em;
+        }
+        .button {
+            /*align buttons with the text fields*/
+            padding-left: 90px; /*same size as the label elements*/
+        }
+        button {
+            /*this extra margin represents roughly the same space as the space
+            between the labels and their text fields*/
+            margin-left: 0.5em;
+        }
+        #feedback {
+            background-color: antiquewhite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: .5em;
+            /*make thes element invisible until we are ready for it*/
+            display: none;
+        }
+        .moveDown {
+            margin-top: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/over_yonder_logo2.png" alt="Over Yonder">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Rivers.html">Rivers</a>
+                <a href="site-plan-rafting.html">Site Plan</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </header>
+        <main>
+            <div id="feedback"></div>
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user-email" />
+                    </li>
+                    <li>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user-message"></textarea>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Send your message</button>
+                    </li>
+                </ul>
+            </form>
+        </main>            
+        <!--<main class="home-grid">
+            <section class="rivers-card">
+                <img class="card-img" src="images/rivers.jpg" alt="river in forest">
+                <img class="icon" src="images/river_icon.png" alt="river icon">
+                <h2>Rivers</h2>
+            </section>
+            <section class="camping-card">
+                <img class="card-img" src="images/camping.jpg" alt="tent in mountain">
+                <img class="icon" src="images/fire_icon.png" alt="fire icon">
+                <h2>Camping</h2>
+            </section>
+            <Section class="rapids-card">
+                <img class="card-img" src="images/rapids.jpg" alt="rafting boat">
+                <img class="icon" src="images/oars.png" alt="oars icon">
+                <h2>Rapids</h2>
+            </Section>
+            <div id="background"></div>
+            <img class="mountains" src="images/mountains.jpg" alt="mountains">
+            <section class="msg">
+                <h2>More than Just The Thrill</h2>
+                <p>Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's way more than just the rapids. It's a great way to get away from it all and relax amongst all the beauty of the great outdoors.</p>
+                <a class='join' href="rivers.html">Join Us</a>
+            </section>
+        </main>-->
+        <footer>
+            <p>Over Yonder &copy; 2022 - LaMond Lamoreaux</p>
+            <p><a href="site=plan-rafting.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        //get the feedback div elemnt so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        //get the form so we can read what was entered in it.
+        const formElement = document.forms[0]
+        //add a 'listenet' to wait for a submission of our form. when that happens, run the code below.
+        formElement.addEventListener('submit', function(e) {
+            //stop the form from doing the default action.
+            e.preventDefault();
+            //set the contects fo our feedback element to a message letting the user know the form was submitted successfully. 
+            //notice that we pull the name that was enetered in the form to personalize the message.
+            feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value + '! Thank you for your message. We will get back with you as soon as possible.';
+            //make the feedback element visible.
+            feedbackElement.style.display = "block";
+            //adde a class to move everything down so our message doesn't cover it.
+            document.body.classlist.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
