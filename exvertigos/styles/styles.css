@@ -16,7 +16,7 @@
     --paragraph-background-color: #B4ADEA;
     --nav-link-color: #FCE762;
     --nav-background-color: #EF798A;
-    --nav-hover-link-color: #FFFDED;
+    --nav-hover-link-color: #FCE762;
     --nav-hover-background-color: #B4ADEA;
   }
 
@@ -48,7 +48,7 @@ header {
 #logo-link {
     padding-top: 5px;
     justify-content: center;
-    align-self: center;
+    /*align-self: center;*/
 }
 nav {
     display: flex;
@@ -58,10 +58,11 @@ nav {
 nav a{
     text-align: center;
     padding: 35px;
+    color: var(--nav-link-color);
 }
 nav a:hover {
     background-color: var(--nav-hover-background-color);
-    color: var(--nav-link-color);
+    color: var(--nav-hover-link-color);
 }
 #hero {
     display: grid;
@@ -137,6 +138,7 @@ footer {
 footer a {
     padding: 15px;
     text-align: center;
+    color: var(--nav-link-color);
 }
 footer a:hover {
     background-color: var(--nav-hover-background-color);
@@ -192,4 +194,17 @@ footer a:hover {
     grid-column: 4/6;
     grid-row: 4/5;
     text-align: left;
+}
+
+/*News*/
+#hero-news-msg {
+    text-align: center;
+    margin: 75px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: xx-large;
+    background-color: #B4ADEA;
+}
+.news-grid {
+    display: block;
 }
